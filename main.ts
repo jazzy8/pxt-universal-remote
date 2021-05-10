@@ -91,3 +91,30 @@ let blurayplayer = {
     tvvolup: [0],
     tvvoldown: [0],
 }
+
+let cdplayer = {
+    power: [0],
+    eject: [0],
+    pauseplay: [0],
+    rewind: [0],
+    fastforward: [0],
+    prev: [0],
+    next: [0],
+    stop: [0],
+    repeat: [0],
+    shuffle: [0],
+}
+
+let appletv = {
+    up: [0],
+    down: [0],
+    left: [0],
+    right: [0],
+    ok: [0],
+    menu: [0],
+    playpause: [0],
+    siri: [0],
+    volup: [0],
+    voldown: [0],
+    tv: [0],
+}
