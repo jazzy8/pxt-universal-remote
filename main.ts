@@ -213,8 +213,6 @@ let infared_output = {
 }
 
 
-let device = television;
-let button = device.power;
 let i = 0;
 
 let reading = false;
@@ -243,5 +241,85 @@ async function readfrom (obj:Object, but:string) {
     while (writing) {
         infared_output.write(abc[i]);
         i++;
+        if(i >= abc.length) {
+            i = 0;
+        }
     }
 }
+
+let device = television;
+let button = device.power;
+
+basic.showString("TV Power");
+
+function nextbutton () {
+    if(device === television && button === device.power) {
+        button = television.up;
+        basic.showString("GoUp   TV");
+    } else if(device === television && button === device.up) {
+        button = television.down;
+        basic.showString("GoDown   TV");
+    } else if(device === television && button === device.down) {
+        button = television.left;
+        basic.showString("GoLeft   TV");
+    } else if(device === television && button === device.left) {
+        button = television.right;
+        basic.showString("GoRight   TV");
+    } else if(device === television && button === device.right) {
+        button = television.ok;
+        basic.showString("OkEnter   TV");
+    } else if(device === television && button === device.ok) {
+        button = television.volup;
+        basic.showString("VolumeUp   TV");
+    } else if(device === television && button === device.volup) {
+        button = television.voldown;
+        basic.showString("VolumeDown   TV");
+    } else if(device === television && button === device.voldown) {
+        button = television.chup;
+        basic.showString("NextChannel   TV");
+    } else if(device === television && button === device.chup) {
+        button = television.chdown;
+        basic.showString("PreviousChannel   TV");
+    } else if(device === television && button === device.chdown) {
+        button = television.source;
+        basic.showString("Source   TV");
+    } else if(device === television && button === device.source) {
+        button = television.back;
+        basic.showString("GoBack   TV");
+    } else if(device === television && button === device.back) {
+        button = television.guide;
+        basic.showString("Guide   TV");
+    } else if(device === television && button === device.guide) {
+        button = television.num1;
+        basic.showString("Number1   TV");
+    } else if(device === television && button === device.num1) {
+        button = television.num2;
+        basic.showString("Number2   TV");
+    } else if(device === television && button === device.num2) {
+        button = television.num3;
+        basic.showString("Numbe3   TV");
+    } else if(device === television && button === device.num3) {
+        button = television.num4;
+        basic.showString("Number4   TV");
+    } else if(device === television && button === device.num4) {
+        button = television.num5;
+        basic.showString("Number5   TV");
+    } else if(device === television && button === device.num5) {
+        button = television.num6;
+        basic.showString("Number6   TV");
+    } else if(device === television && button === device.num6) {
+        button = television.num7;
+        basic.showString("Number7   TV");
+    } else if(device === television && button === device.num7) {
+        button = television.num8;
+        basic.showString("Number8   TV");
+    } else if(device === television && button === device.num8) {
+        button = television.num9;
+        basic.showString("Number9   TV");
+    } else if(device === television && button === device.num9) {
+        button = television.num0;
+        basic.showString("Number0   TV");
+    }
+}
+
+input.onButtonPressed(Button.A, nextbutton)
