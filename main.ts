@@ -118,3 +118,37 @@ let appletv = {
     voldown: [0],
     tv: [0],
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+let infared_input = {
+    invert: false,
+    read: function () {
+        let abc = pins.digitalReadPin(DigitalPin.P1);
+        if(infared_input.invert) {
+            return 1 - abc;
+        } else {
+            return abc;
+        }
+    }
+}
